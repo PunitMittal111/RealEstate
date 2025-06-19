@@ -62,7 +62,7 @@ const initialState: AuthState = {
   isAuthenticated: localStorage.getItem("isAuth") === "true" ? true : false,
 };
 
-const API_URL = "http://localhost:5000";
+const API_URL = import.meta.env.VITE_API_URI;
 
 export const registerUser = createAsyncThunk<
   RegisterResponse,
