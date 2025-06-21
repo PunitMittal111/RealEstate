@@ -37,7 +37,7 @@ const initialState: PropertyState = {
   error: null,
 };
 
-const API_URL = "http://localhost:5000";
+const API_URL = import.meta.env.VITE_API_URI;
 
 export const createProperty = createAsyncThunk(
   "property/create",
