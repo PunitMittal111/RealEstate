@@ -20,7 +20,7 @@ app.use(cors());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/properties", propertyRoutes);
-app.use("/api/favorites", favoriteRoutes);
+app.use("/api/favorite", favoriteRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
