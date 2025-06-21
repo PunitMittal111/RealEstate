@@ -49,7 +49,7 @@ export const addFavorites = createAsyncThunk<
       },
     };
 
-    await axios.post(`${API_URL}/add/${propertyId}`, {}, config);
+    await axios.post(`${API_URL}/api/favorite/add/${propertyId}`, {}, config);
 
     return propertyId;
   } catch (error: any) {
@@ -73,7 +73,7 @@ export const getFavorites = createAsyncThunk<
       },
     };
 
-    const res = await axios.get(`${API_URL}/get`, config);
+    const res = await axios.get(`${API_URL}/api/favorite/get`, config);
     return res.data;
   } catch (error: any) {
     return rejectWithValue(
@@ -96,7 +96,7 @@ export const removeFavorite = createAsyncThunk<
       },
     };
 
-    await axios.delete(`${API_URL}/remove/${propertyId}`, config);
+    await axios.delete(`${API_URL}/api/favorite/remove/${propertyId}`, config);
 
     return propertyId;
   } catch (error: any) {
