@@ -46,10 +46,8 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
     try {
       if (user?.favorites?.includes(propertyId)) {
         await dispatch(removeFavorite(propertyId)).unwrap();
-        console.log("Property removed from favorites successfully");
       } else {
         await dispatch(addFavorites(propertyId)).unwrap();
-        console.log("Property added to favorites successfully");
       }
 
       const storedUser = localStorage.getItem("user");
